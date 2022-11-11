@@ -150,5 +150,5 @@ def get_author():
 # top_10_cited()
 # authors_mean()
 # avg_pages()
-word_cloud()
+# word_cloud()
 # get_author()
