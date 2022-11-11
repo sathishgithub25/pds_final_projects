@@ -38,7 +38,9 @@ def get_files():
 data_file = load(open("data\isbi2022\page1.json", mode='r', encoding='utf-8'))
 stopwords = list(map(lambda x: x.strip(), open("data/stopwords.txt", mode='r', encoding='utf-8').readlines()))
 
-# top 10 downloaded papers
+
+# ********** top 10 downloaded papers **********
+
 def top_10_downloaded():
     all_titles = dict()
     a = data_file['records']
@@ -60,7 +62,8 @@ def top_10_downloaded():
     plt.show()
 
 
-# top 10 Cited papers
+# ********** top 10 Cited papers **********
+
 def top_10_cited():
     data_file = load(open("data\isbi2022\page1.json", mode='r', encoding='utf-8'))
     all_titles = dict()
@@ -83,7 +86,8 @@ def top_10_cited():
     plt.show()
 
 
-# Mean of authors per paper
+# ********** Mean of authors per paper **********
+
 def authors_mean():
     all_authors = []
     a = data_file['records']
@@ -100,7 +104,8 @@ def authors_mean():
     print(mean_authors)
 
 
-# average number of pages per paper
+# ********** average number of pages per paper **********
+
 def avg_pages():
     all_pages = []
     a = data_file['records']
@@ -115,7 +120,8 @@ def avg_pages():
     print(avg_pages)
 
 
-# most used words in the abstract
+# *********** most used words in the abstract ***********
+
 def word_cloud():
     all_words = []
     final_out = []
@@ -140,7 +146,7 @@ def word_cloud():
     plt.axis('off')
     plt.show()
 
-# Author who contributed most papers
+# '******** Author who contributed most papers *******'
 def get_author():
     all_authors = []
     a = data_file['records']
@@ -169,4 +175,4 @@ def get_author():
 # authors_mean()
 # avg_pages()
 # word_cloud()
-get_author()
+# get_author()
